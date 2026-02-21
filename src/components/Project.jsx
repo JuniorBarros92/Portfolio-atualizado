@@ -8,7 +8,13 @@ export default function Projects() {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <a
+              className="project-card"
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {project.image && (
                 <div className="project-image">
                   <img src={project.image} alt={project.title} />
@@ -18,11 +24,8 @@ export default function Projects() {
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href={project.link} target="_blank" className="btn btn-primary">
-                  Ver Projeto
-                </a>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

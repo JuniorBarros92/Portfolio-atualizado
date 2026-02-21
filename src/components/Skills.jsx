@@ -5,7 +5,7 @@ export default function Skills() {
   const [ref, visible] = useScrollReveal()
 
   return (
-    <section>
+    <section id="skills">
       <div className="container">
         <h2 className={styles.title}>Habilidades</h2>
 

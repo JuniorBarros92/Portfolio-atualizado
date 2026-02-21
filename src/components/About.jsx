@@ -1,12 +1,13 @@
-import styles from "./About.module.css"
-import { useScrollReveal } from "../hooks/useScrollReveal"
+import styles from "./About.module.css";
+import foto from "../assets/WhatsApp Image 2025-09-01 at 00.42.09.jpeg";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
-  const [imageRef, imageVisible] = useScrollReveal()
-  const [textRef, textVisible] = useScrollReveal()
+  const [imageRef, imageVisible] = useScrollReveal();
+  const [textRef, textVisible] = useScrollReveal();
 
   return (
-    <section>
+    <section id="about">
       <div className="container">
         <h2 className={styles.title}>Sobre Mim</h2>
 
@@ -15,7 +16,7 @@ export default function About() {
             ref={imageRef}
             className={`${styles.image} ${imageVisible ? styles.showLeft : ""}`}
           >
-            <img src="/sua-foto.jpg" alt="Junior" />
+            <img src={foto} alt="Junior" />
           </div>
 
           <div
@@ -23,11 +24,17 @@ export default function About() {
             className={`${styles.text} ${textVisible ? styles.showRight : ""}`}
           >
             <p>
-              Estudante de ADS focado em Front-End e UI moderna.
+              Estudante de Análise e Desenvolvimento de Sistemas e estou
+              iniciando minha jornada em Front-End e Design de Interfaces
+              (UI/UX). Tenho conhecimentos básicos em HTML,CSS e JavaScript e
+              React, estou aprendendo a criar interfaces modernas e funcionais..
+              Tenho facilidade em aprender novas tecnologias. Também possuo
+              experiência em outras áreas, o que me trouxe visão de equipe,
+              disciplina e foco em resultado.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
