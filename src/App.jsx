@@ -1,10 +1,11 @@
 
 import "./styles/global.css"
+import Cadastro from "./components/Cadastro"
 
 function App() {
   return (
     <>
-      
+      <Cadastro />
     </>
   )
 }

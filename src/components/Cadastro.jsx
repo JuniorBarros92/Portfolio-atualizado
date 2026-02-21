@@ -1,19 +1,18 @@
+import { useState } from "react"
 import styles from "./Cadastro.module.css"
-
-
-
 
 export default function Cadastro() {
 
-  const [name, setName] = useState([])
-  const [email, setEmail] = useState([])
-  const [age, setAge] = useState([])
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [age, setAge] = useState("")
   const [users, setUsers] = useState([])
 
   function handleSubmit(event) {
     event.preventDefault()
 
     const newUser = {
+      id: Date.now(),
       name,
       email,
       age
@@ -41,8 +40,10 @@ export default function Cadastro() {
 
       <div className="user-list">
         {users.map((user) => (
-          <div>
+          <div key={user.id}>
             <p>{user.name}</p>
+            <p>{user.email}</p>
+            <p>{user.age}</p>
           </div>
         ))}
       </div>
