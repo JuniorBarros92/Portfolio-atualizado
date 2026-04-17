@@ -14,12 +14,8 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') !== 'light';
-    }
-    return true;
-  });
+  // Força o início no modo claro, ignorando o cache salvo no navegador
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     if (isDark) {

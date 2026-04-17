@@ -35,13 +35,13 @@ const projectsData = [
   },
   {
     id: 4,
-    title: 'Floresta - Site de Turismo e Hospedagem',
+    title: 'Controle de Vendas',
     description:
-      'Um site moderno e responsivo para experiências de turismo ecológico em floresta. O projeto apresenta uma interface atraente e fácil de usar, com seções dedicadas a destinos, atividades, pacotes e contato. Utiliza animações suaves para melhorar a experiência do usuário e é otimizado para desempenho e SEO.',
-    image: '/floresta.png',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    demo: 'https://projeto-floresta.netlify.app/',
-    github: 'https://github.com/JuniorBarros92/TailwindCSS',
+      'Um aplicativo web para controle e análise de vendas, desenvolvido com React, TypeScript e Vite. Permite visualizar resumos de vendas, listar vendas por período e visualizar detalhes individuais de vendas, incluindo gráficos interativos.',
+    image: '/controle-de-vendas.png',
+    tags: ['React', 'TypeScript', 'Vite'],
+    demo: 'https://controle-de-venda.netlify.app/',
+    github: 'https://github.com/JuniorBarros92/controle-de-vendas',
   },
 ];
 
@@ -82,7 +82,7 @@ export function Projects() {
               </div>
 
               <div className="p-8 flex-1 flex flex-col">
-                <h3 className="text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-[var(--gradient-bg)] transition-all">
+                <h3 className="text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--color-primary)] transition-colors duration-300">
                   {project.title}
                 </h3>
                 <p className="text-[var(--text-muted)] mb-6 line-clamp-3">
