@@ -3,7 +3,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { name: 'Início', href: '#home' },
+  
   { name: 'Sobre', href: '#about' },
   { name: 'Habilidades', href: '#skills' },
   { name: 'Projetos', href: '#projects' },
@@ -39,7 +39,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 top-0 pt-4 px-4 md:px-0`}
+      className={`absolute w-full z-50 transition-all duration-500 top-0 pt-4 px-4 md:px-0`}
     >
       <div 
         className={`mx-auto max-w-5xl transition-all duration-500 ${

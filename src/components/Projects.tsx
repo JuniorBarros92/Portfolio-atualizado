@@ -43,6 +43,16 @@ const projectsData = [
     demo: 'https://controle-de-venda.netlify.app/',
     github: 'https://github.com/JuniorBarros92/controle-de-vendas',
   },
+  {
+    id: 5,
+    title: 'Sabor & Arte - Site de Restaurante',
+    description:
+      'Este projeto apresenta uma landing page de restaurante com: Seção inicial com call-to-action Cardápio interativo com cards de pratos Modal de detalhes de cada prato Carrinho de pedidos com contagem, quantidade e total Formulário de reserva de mesa Seções de sobre, contato e horários Navegação mobile com menu hambúrguer Animações simples de scroll ',
+    image: '/restaurante.png ',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    demo: 'https://cardapiors.netlify.app/',
+    github: 'https://github.com/JuniorBarros92/cardapio-restaurante',
+  }
 ];
 
 export function Projects() {
