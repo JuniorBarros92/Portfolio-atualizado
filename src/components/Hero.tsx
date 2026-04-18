@@ -1,39 +1,8 @@
-import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export function Hero() {
-  const typewriterRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const typewriterText = typewriterRef.current;
-    if (!typewriterText) return;
-
-    const text = "Desenvolvedor Front-End";
-    typewriterText.textContent = '';
-    let i = 0;
-    let currentTimeout: ReturnType<typeof setTimeout>;
-    
-    function typeWriter() {
-        if (!typewriterRef.current) return;
-        if (i < text.length) {
-            typewriterText!.textContent += text.charAt(i);
-            i++;
-            currentTimeout = setTimeout(typeWriter, 100);
-        } else {
-            currentTimeout = setTimeout(() => {
-                i = 0;
-                typewriterText!.textContent = '';
-                typeWriter();
-            }, 3000);
-        }
-    }
-    
-    currentTimeout = setTimeout(typeWriter, 1000);
-
-    return () => clearTimeout(currentTimeout);
-  }, []);
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Decorativo Estático (Curva e Gradiente Suave) */}
@@ -74,7 +43,9 @@ export function Hero() {
           </h1>
           
           <h2 className="text-2xl md:text-4xl text-[var(--text-muted)] font-medium mb-6 h-10 flex items-center justify-center">
-            <span ref={typewriterRef} className="whitespace-pre"></span><span className="animate-pulse ml-1 text-[var(--color-primary)]">|</span>
+            <TextAnimate animation="slideUp" by="word">
+              Desenvolvedor Front-End
+            </TextAnimate>
           </h2>
           
           <p className="text-lg md:text-xl text-[var(--text-muted)] mb-10 max-w-2xl leading-relaxed">
